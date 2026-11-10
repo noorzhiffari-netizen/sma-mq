@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --hijau-tua: #123323;
+    --hijau: #1E5A3B;
+    --emas: #B4863A;
+    --krem: #F6F1E4;
+    --putih: #FFFDF8;
+    --tinta: #1C221D;
+    --abu: #6C7267;
+    --garis: #DED6C0;
+    --radius: 4px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Work Sans', sans-serif; background: var(--krem); color: var(--tinta); }
+a { color: var(--hijau); }
+
+.admin-shell { display: flex; min-height: 100vh; }
+.admin-sidebar { width: 240px; background: var(--hijau-tua); color: #EDE7D6; flex-shrink: 0; }
+.admin-sidebar .merek { padding: 24px 22px; font-family: 'Fraunces', serif; font-size: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.admin-sidebar .merek small { display: block; font-family: 'Work Sans', sans-serif; font-size: 0.72rem; color: #A7B29F; font-weight: 400; margin-top: 4px; }
+.admin-sidebar nav ul { list-style: none; margin: 0; padding: 14px 0; }
+.admin-sidebar nav a { display: block; padding: 12px 22px; color: #C9D3C6; font-size: 0.92rem; border-left: 3px solid transparent; }
+.admin-sidebar nav a:hover, .admin-sidebar nav a.aktif { background: rgba(255,255,255,0.06); color: #FBF7EC; border-left-color: var(--emas); }
+
+.admin-konten { flex: 1; padding: 34px 40px; }
+.admin-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.admin-topbar h1 { font-family: 'Fraunces', serif; font-size: 1.5rem; margin: 0; color: var(--hijau-tua); }
+
+.kartu-admin { background: var(--putih); border: 1px solid var(--garis); border-radius: var(--radius); padding: 26px; margin-bottom: 24px; }
+
+.grid-ringkas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 28px; }
+.ringkas { background: var(--putih); border: 1px solid var(--garis); border-radius: var(--radius); padding: 20px 22px; }
+.ringkas strong { display: block; font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--hijau-tua); }
+.ringkas span { font-size: 0.84rem; color: var(--abu); }
+
+table.tabel-admin { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.tabel-admin th, table.tabel-admin td { padding: 11px 12px; border-bottom: 1px solid var(--garis); text-align: left; vertical-align: top; }
+table.tabel-admin th { background: var(--krem); color: var(--hijau-tua); }
+table.tabel-admin tr:hover td { background: #FBF9F3; }
+
+.btn { display: inline-block; padding: 9px 18px; border-radius: var(--radius); font-weight: 600; font-size: 0.85rem; border: 1.5px solid transparent; cursor: pointer; text-decoration: none; }
+.btn-emas { background: var(--emas); color: #fff; }
+.btn-luar { border-color: var(--garis); color: var(--tinta); background: var(--putih); }
+.btn-hapus { border-color: #C4523F; color: #C4523F; background: transparent; }
+.btn-kecil { padding: 6px 12px; font-size: 0.78rem; }
+
+.form-admin .grup-form { margin-bottom: 18px; }
+.form-admin label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--hijau-tua); }
+.form-admin input, .form-admin select, .form-admin textarea {
+    width: 100%; padding: 10px 12px; border: 1px solid var(--garis); border-radius: var(--radius);
+    font-family: inherit; font-size: 0.92rem; background: var(--putih);
+}
+.form-admin textarea { min-height: 140px; resize: vertical; }
+
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.74rem; font-weight: 600; }
+.badge-hijau { background: #E6F0E9; color: #1E5A3B; }
+.badge-emas { background: #F5EAD4; color: #92651E; }
+.badge-merah { background: #F7E7E2; color: #9C3B27; }
+
+.pesan-status { padding: 12px 16px; border-radius: var(--radius); margin-bottom: 20px; font-size: 0.88rem; }
+.pesan-status.sukses { background: #E6F0E9; color: #1E5A3B; border: 1px solid #BBD8C6; }
+.pesan-status.gagal { background: #F7E7E2; color: #9C3B27; border: 1px solid #E9BDAF; }
+
+.halaman-login { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--hijau-tua); }
+.kotak-login { background: var(--putih); padding: 40px; border-radius: var(--radius); width: 100%; max-width: 380px; }
+.kotak-login h1 { font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--hijau-tua); margin-top:0; }
